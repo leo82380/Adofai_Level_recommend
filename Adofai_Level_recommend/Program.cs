@@ -49,7 +49,10 @@ namespace AdofaiRandom
                 case 2:
                     Random aaa = new Random();
                     Console.WriteLine("사용법");
-                    Console.WriteLine("adofai.gg/levels/ 뒤에 숫자를 입력하면 된다");
+                    Console.WriteLine("1.추천레벨 개수 입력 후 나오는 링크를 복사");
+                    Console.WriteLine("2.복사한 링크를 주소창에 붙여넣기");
+                    Console.WriteLine("3.나오는 사이트에 다운로드 버튼 클릭");
+                    Console.WriteLine("4.다운로드한 파일 압축해제 한 후 얼불춤 레벨에디터에서 열기");
                     //레벨 개수
                     Console.WriteLine("추천 레벨 개수 입력");
                     int levels = int.Parse(Console.ReadLine());
@@ -58,6 +61,8 @@ namespace AdofaiRandom
                     {
                         int levelcur = aaa.Next(0, 5000);
                         Console.WriteLine($"추천레벨 {i} : {levelcur}");
+                        Console.WriteLine("레벨 링크 : ");
+                        Console.WriteLine($"adofai.gg/levels/{levelcur}");
                     }
                     break;
                 default:

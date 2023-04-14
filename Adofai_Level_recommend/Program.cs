@@ -20,6 +20,10 @@ namespace AdofaiRandom
             {
                 //난이도
                 case 1:
+                    Console.WriteLine("사용법");
+                    Console.WriteLine("1.adofai.gg/levels에 가서 난이도 설정");
+                    Console.WritrLine("2.몇번째 레벨인지 확인 후 맞는 곳으로 이동");
+                    Console.WriteLine("3.다운로드 후 얼불춤에서 열기");
                     //난이도 설정
                     Console.WriteLine("최소 난이도를 입력하세요 : ");
                     int minLevel = int.Parse(Console.ReadLine());

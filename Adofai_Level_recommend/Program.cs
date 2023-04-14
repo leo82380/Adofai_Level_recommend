@@ -6,13 +6,19 @@ namespace AdofaiRandom
     {
         static void Main(string[] args)
         {
+            //랜덤 선언
             Random a = new Random();
+            //봇 설명
             Console.WriteLine("얼불춤 맵 추천봇");
+            //정해진 곳으로 이동
             Console.WriteLine("1번 입력: 난이도 설정");
             Console.WriteLine("2번 입력: 랜덤 포럼 번호 생성");
+            //처음 이동할 값 입력
             int aa = int.Parse(Console.ReadLine());
+
             switch (aa)
             {
+                //난이도
                 case 1:
                     //난이도 설정
                     Console.WriteLine("최소 난이도를 입력하세요 : ");
@@ -28,6 +34,7 @@ namespace AdofaiRandom
                     Console.WriteLine("추천 레벨의 개수를 입력하세요");
                     int level = int.Parse(Console.ReadLine());
 
+                    //여러개 추천하는 코드
                     for (int i = 0; i < level; i++)
                     {
                         float b = a.Next(minLevel, maxLevel);
@@ -38,6 +45,7 @@ namespace AdofaiRandom
 
                     }
                     break;
+                //레벨 번호
                 case 2:
                     Random aaa = new Random();
                     Console.WriteLine("사용법");
@@ -45,7 +53,7 @@ namespace AdofaiRandom
                     //레벨 개수
                     Console.WriteLine("추천 레벨 개수 입력");
                     int levels = int.Parse(Console.ReadLine());
-
+                    //레벨 출력
                     for (int i = 0; i <= levels; i++)
                     {
                         int levelcur = aaa.Next(0, 5000);

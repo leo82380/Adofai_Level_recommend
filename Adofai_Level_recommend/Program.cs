@@ -13,18 +13,19 @@ namespace AdofaiRandom
             //정해진 곳으로 이동
             Console.WriteLine("1번 입력: 난이도 설정");
             Console.WriteLine("2번 입력: 랜덤 포럼 번호 생성");
-            //처음 이동할 값 입력
-            int aa = int.Parse(Console.ReadLine());
+            try {
+                //처음 이동할 값 입력
+                int aa = int.Parse(Console.ReadLine());
 
-            switch (aa)
-            {
-                //난이도
-                case 1:
-                    //난이도 설정
-                    Console.WriteLine("최소 난이도를 입력하세요 : ");
-                    int minLevel = int.Parse(Console.ReadLine());
-                    Console.WriteLine("최대 난이도를 입력하세요 : ");
-                    int maxLevel = int.Parse(Console.ReadLine());
+                switch (aa)
+                {
+                    //난이도
+                    case 1:
+                        //난이도 설정
+                        Console.WriteLine("최소 난이도를 입력하세요 : ");
+                        int minLevel = int.Parse(Console.ReadLine());
+                        Console.WriteLine("최대 난이도를 입력하세요 : ");
+                        int maxLevel = int.Parse(Console.ReadLine());
 
                         //몇번째 레벨
                         Console.WriteLine("몇번째 레벨까지 추천합니까?");
@@ -70,11 +71,12 @@ namespace AdofaiRandom
                         break;
                 }
             }
-            catch(FormatException e)
-            {
-                Console.WriteLine(e.Message);
-                Console.WriteLine("잘못된 값을 입력하였습니다.");
+             catch(FormatException e)
+              {
+                   Console.WriteLine(e.Message);
+                   Console.WriteLine("잘못된 값을 입력하였습니다");
+              }
             }
         }
     }
-}
+

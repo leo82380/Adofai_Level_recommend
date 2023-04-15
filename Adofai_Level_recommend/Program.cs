@@ -15,6 +15,7 @@ namespace AdofaiRandom
             Console.WriteLine("1번 입력: 난이도 설정(좀 불편)");
             Console.WriteLine("2번 입력: 랜덤 포럼 번호 생성(편리)");
             #endregion
+
             #region 봇 실행
             try
             {
@@ -23,7 +24,7 @@ namespace AdofaiRandom
 
                 switch (aa)
                 {
-                    #region 난이도 설정
+                    #region 난이도 설정(1 선택)
                     //난이도
                     case 1:
                         #region 난이도설정 사용법
@@ -103,7 +104,7 @@ namespace AdofaiRandom
                         break;
                     #endregion
 
-                    #region 포럼 번호
+                    #region 포럼 번호(2 선택)
                     //레벨 번호
                     case 2:
                         Random aaa = new Random();

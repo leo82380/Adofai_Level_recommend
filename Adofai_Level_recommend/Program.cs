@@ -24,17 +24,42 @@ namespace AdofaiRandom
                         //난이도 설정
                         Console.WriteLine("최소 난이도를 입력하세요 : ");
                         int minLevel = int.Parse(Console.ReadLine());
-                        Console.WriteLine("최대 난이도를 입력하세요 : ");
+                        if (minLevel <= 0)
+                        {
+                            Console.WriteLine("잘못된 값을 입력하였습니다.");
+                            break;
+                        }
+                        Console.WriteLine("최대 난이도를 입력하세요(소숫점 없이) : ");
                         int maxLevel = int.Parse(Console.ReadLine());
-
+                        if(minLevel > maxLevel)
+                        {
+                            Console.WriteLine("최소 난이도가 최대 난이도보다 큽니다.");
+                            Console.WriteLine("값을 교환합니다.");
+                            int change = minLevel;
+                            minLevel = maxLevel;
+                            maxLevel = change;
+                        }
+                        if(maxLevel >= 22)
+                        {
+                            Console.WriteLine("잘못된 값을 입력하였습니다.");
+                            break;
+                        }
                         //몇번째 레벨
                         Console.WriteLine("몇번째 레벨까지 추천합니까?");
                         int curLevel = int.Parse(Console.ReadLine());
-
+                        if (curLevel <= 0)
+                        {
+                            Console.WriteLine("잘못된 값을 입력하였습니다.");
+                            break;
+                        }
                         //개수 추천
                         Console.WriteLine("추천 레벨의 개수를 입력하세요");
                         int level = int.Parse(Console.ReadLine());
-
+                        if (level <= 0)
+                        {
+                            Console.WriteLine("잘못된 값을 입력하였습니다.");
+                            break;
+                        }
                         //여러개 추천하는 코드
                         for (int i = 0; i < level; i++)
                         {
@@ -57,6 +82,10 @@ namespace AdofaiRandom
                         //레벨 개수
                         Console.WriteLine("추천 레벨 개수 입력");
                         int levels = int.Parse(Console.ReadLine());
+                        if(levels <= 0)
+                        {
+                            Console.WriteLine("잘못된 값을 입력하였습니다.");
+                        }
                         //레벨 출력
                         for (int i = 0; i <= levels; i++)
                         {

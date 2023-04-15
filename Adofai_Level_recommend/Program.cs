@@ -6,7 +6,7 @@ namespace AdofaiRandom
     {
         static void Main(string[] args)
         {
-            #region 봇설명
+            #region 봇 설명
             //랜덤 선언
             Random a = new Random();
             //봇 설명

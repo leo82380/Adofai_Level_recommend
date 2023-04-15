@@ -31,6 +31,11 @@ namespace AdofaiRandom
                         }
                         Console.WriteLine("최대 난이도를 입력하세요(소숫점 없이) : ");
                         int maxLevel = int.Parse(Console.ReadLine());
+                        if(maxLevel % 1 != 0)
+                        {
+                            Console.WriteLine("잘못된 값을 입력하였습니다.");
+                            break;
+                        }
                         if(minLevel > maxLevel)
                         {
                             Console.WriteLine("최소 난이도가 최대 난이도보다 큽니다.");

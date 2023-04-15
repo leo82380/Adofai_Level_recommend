@@ -11,8 +11,8 @@ namespace AdofaiRandom
             //봇 설명
             Console.WriteLine("얼불춤 맵 추천봇");
             //정해진 곳으로 이동
-            Console.WriteLine("1번 입력: 난이도 설정");
-            Console.WriteLine("2번 입력: 랜덤 포럼 번호 생성");
+            Console.WriteLine("1번 입력: 난이도 설정(좀 불편)");
+            Console.WriteLine("2번 입력: 랜덤 포럼 번호 생성(편리)");
             try {
                 //처음 이동할 값 입력
                 int aa = int.Parse(Console.ReadLine());
@@ -21,17 +21,23 @@ namespace AdofaiRandom
                 {
                     //난이도
                     case 1:
+                        Console.WriteLine("사용법");
+                        Console.WriteLine("1. 최소 난이도와 최대 난이도를 설정한다.");
+                        Console.WriteLine("2. 몇번째 맵을 플레이할건지, 몇개를 플레이할건지 입력한다.");
+                        Console.WriteLine("3. 나오는 값을 adofai.gg에 가서 검색한다.");
+                        Console.WriteLine("4. 다운로드 한 후 즐긴다.");
+                        Console.WriteLine("레벨은 정수 형태만 가능, 1Lv ~ 21Lv 까지 가능");
                         //난이도 설정
-                        Console.WriteLine("최소 난이도를 입력하세요 : ");
+                        Console.WriteLine("최소 난이도를 입력하세요(소숫점 없이) : ");
                         int minLevel = int.Parse(Console.ReadLine());
-                        if (minLevel <= 0)
+                        if (minLevel <= 0 || minLevel % 1 != 0)
                         {
                             Console.WriteLine("잘못된 값을 입력하였습니다.");
                             break;
                         }
                         Console.WriteLine("최대 난이도를 입력하세요(소숫점 없이) : ");
                         int maxLevel = int.Parse(Console.ReadLine());
-                        if(maxLevel % 1 != 0)
+                        if(maxLevel >= 22 || maxLevel % 1 != 0)
                         {
                             Console.WriteLine("잘못된 값을 입력하였습니다.");
                             break;
@@ -74,6 +80,7 @@ namespace AdofaiRandom
                             int c = a.Next(1, curLevel);
                             Console.WriteLine($"{c}번째 레벨");
 
+                            Console.WriteLine("");
                         }
                         break;
                     //레벨 번호
@@ -84,20 +91,25 @@ namespace AdofaiRandom
                         Console.WriteLine("2.복사한 링크를 주소창에 붙여넣기");
                         Console.WriteLine("3.나오는 사이트에 다운로드 버튼 클릭");
                         Console.WriteLine("4.다운로드한 파일 압축해제 한 후 얼불춤 레벨에디터에서 열기");
+                        Console.WriteLine("만약 해당하는 레벨이 없는 경우 스킵");
+                        Console.WriteLine("");
                         //레벨 개수
-                        Console.WriteLine("추천 레벨 개수 입력");
+                        Console.WriteLine("추천 레벨 개수 입력(1~10개)");
                         int levels = int.Parse(Console.ReadLine());
-                        if(levels <= 0)
+                        if(levels <= 0 || levels >= 11)
                         {
                             Console.WriteLine("잘못된 값을 입력하였습니다.");
+                            break;
                         }
+                        
                         //레벨 출력
-                        for (int i = 0; i <= levels; i++)
+                        for (int i = 1; i <= levels; i++)
                         {
                             int levelcur = aaa.Next(0, 5000);
                             Console.WriteLine($"추천레벨 {i} : {levelcur}");
                             Console.WriteLine("레벨 링크 : ");
                             Console.WriteLine($"adofai.gg/levels/{levelcur}");
+                            Console.WriteLine("");
                         }
                         break;
                     default:

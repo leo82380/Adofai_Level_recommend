@@ -99,6 +99,11 @@ namespace AdofaiRandom
                             Console.WriteLine(e.Message);
                             Console.WriteLine("잘못된 값을 입력하였습니다.");
                         }
+                        catch(OverflowException e)
+                        {
+                            Console.WriteLine(e.Message);
+                            Console.WriteLine("오버플로우 발생");
+                        }
                         break;
                     #endregion
 
@@ -146,6 +151,11 @@ namespace AdofaiRandom
                             Console.WriteLine(e.Message);
                             Console.WriteLine("잘못된 값을 입력하였습니다.");
                         }
+                        catch(OverflowException e)
+                        {
+                            Console.WriteLine(e.Message);
+                            Console.WriteLine("오버플로우 발생");
+                        }
                         break;
                     #endregion
 
@@ -161,6 +171,11 @@ namespace AdofaiRandom
                    Console.WriteLine(e.Message);
                    Console.WriteLine("잘못된 값을 입력하였습니다");
               }
+            catch (OverflowException e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine("오버플로우 발생");
+            }
             }
         #endregion
         }

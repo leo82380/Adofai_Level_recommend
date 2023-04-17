@@ -138,7 +138,7 @@ namespace AdofaiRandom
                             //레벨 출력
                             for (int i = 1; i <= levels; i++)
                             {
-                                int levelcur = aaa.Next(0, 5000);
+                                int levelcur = aaa.Next(0, 4734);
                                 Console.WriteLine($"추천레벨 {i} : {levelcur}");
                                 Console.WriteLine("레벨 링크 : ");
                                 Console.WriteLine($"adofai.gg/levels/{levelcur}");
